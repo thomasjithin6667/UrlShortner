@@ -22,7 +22,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { removeUrl } from "@/services/user/apiMethods";
 import { toast } from "sonner";
-import { DOMAIN_URL } from "@/constants/baseUrls";
+import { BASE_URL } from "@/constants/baseUrls";
 
 export function Links({ link, setLinks }: any) {
   const [copied, setCopied] = useState(false);
@@ -30,7 +30,7 @@ export function Links({ link, setLinks }: any) {
 
   const handleCopy = () => {
     navigator.clipboard.writeText(
-      `${DOMAIN_URL}/${link?.shortUrl}`
+      `${BASE_URL}/${link?.shortUrl}`
     );
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
@@ -85,7 +85,7 @@ export function Links({ link, setLinks }: any) {
                 </Label>
                 <Input
                   id="link"
-                  defaultValue={`${DOMAIN_URL}/api/url/${link?.shortUrl}`}
+                  defaultValue={`${BASE_URL}/api/url/${link?.shortUrl}`}
                   readOnly
                 />
               </div>

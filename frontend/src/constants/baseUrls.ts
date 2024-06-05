@@ -1,2 +1,3 @@
-export const BASE_URL = 'http://localhost:5000'
-export const DOMAIN_URL='http://'
+// export const BASE_URL = 'http://localhost:5000'
+export const BASE_URL = 'https://urlshortner.circleup.site/'
+
