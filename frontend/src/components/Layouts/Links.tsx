@@ -30,7 +30,7 @@ export function Links({ link, setLinks }: any) {
 
   const handleCopy = () => {
     navigator.clipboard.writeText(
-      `${BASE_URL}/${link?.shortUrl}`
+      `${BASE_URL}/api/url/${link?.shortUrl}`
     );
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
